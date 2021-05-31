@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import shared
+import watch
 
 struct ContentView: View {
     let greet = Greeting().greeting()

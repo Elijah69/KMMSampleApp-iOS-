@@ -473,7 +473,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/../SepparatedApp(Android&Shared)/\"\n./gradlew :shared:tasks \n";
+			shellScript = "cd \"$SRCROOT/../SepparatedApp(Android&Shared)/\"\n./gradlew :shared:embedAndSignIosAppleFrameworkForXcode\n";
 		};
 		FF03E0582657E3E400C85852 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -507,7 +507,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/../SepparatedApp(Android&Shared)/\"\necho $(SDK_NAME)\n./gradlew :shared:tasks \n";
+			shellScript = "cd \"$SRCROOT/../SepparatedApp(Android&Shared)/\"\n./gradlew :shared:embedAndSignWatchAppleFrameworkForXcode\n\n \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -708,7 +708,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
-					shared,
+					ios,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -737,7 +737,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
-					shared,
+					ios,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -829,8 +829,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 4RX5B47H76;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../SepparatedApp(Android&Shared)/shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				IBSC_MODULE = watchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "watchApp WatchKit App/Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					watch,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = some.watchApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -849,8 +855,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4RX5B47H76;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../SepparatedApp(Android&Shared)/shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				IBSC_MODULE = watchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "watchApp WatchKit App/Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					watch,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = some.watchApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -869,8 +881,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4RX5B47H76;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../SepparatedApp(Android&Shared)/shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				IBSC_MODULE = watchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "watchApp WatchKit App/Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					watch,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = some.watchApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1133,7 +1151,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
-					shared,
+					ios,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
