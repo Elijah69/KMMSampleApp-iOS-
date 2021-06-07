@@ -1,16 +1,42 @@
 PODS:
-  - shared (0.1)
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - kmmsharedmodule (0.1)
+  - shared (0.1):
+    - AFNetworking
 
 DEPENDENCIES:
+  - "kmmsharedmodule (from `../SepparatedApp(Android&Shared)/kmmsharedmodule`)"
   - "shared (from `../SepparatedApp(Android&Shared)/shared`)"
 
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+
 EXTERNAL SOURCES:
+  kmmsharedmodule:
+    :path: "../SepparatedApp(Android&Shared)/kmmsharedmodule"
   shared:
     :path: "../SepparatedApp(Android&Shared)/shared"
 
 SPEC CHECKSUMS:
-  shared: 7c3d6135ccc8f16823bb497f5e2c15a718497d41
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  kmmsharedmodule: 9a5a4f9d51e73cc1d24d544d423e90089fee21cf
+  shared: f8310a85dba99ce0a5d46ba4ec9425707b684d5c
 
-PODFILE CHECKSUM: 1ccf77d154479eefb23b78fb69e8a70f7564e509
+PODFILE CHECKSUM: 9705fd2e388be3fd1925d17f29ce79df7c78ca5a
 
 COCOAPODS: 1.10.1
